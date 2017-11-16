@@ -1,0 +1,17 @@
+<ion-view view-title="Playlists">
+  <ion-content>
+    <ion-list>
+      <input type="search" ng-model="tipo" placeholder="Tipo" />
+      <input type="search" ng-model="prezzo"placeholder="1.50"/>
+      <input type="search" ng-model="distributore"placeholder="Distributore"/>
+      <select>
+          <option value="Self" ng-model="Self">Self</option>
+          <option value="Servito"ng-model="Servito">Servito</option>
+      </select>
+
+      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id_prezzi}}">
+        {{playlist.costo}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
